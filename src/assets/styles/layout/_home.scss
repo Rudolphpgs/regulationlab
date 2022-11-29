@@ -1,0 +1,100 @@
+.homeBanner {
+  height: 100vh;
+  background-color: $brand-bg;
+  overflow: hidden;
+}
+
+.bannerBg {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.falconBg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.falcon {
+  width: 20vw;
+  height: auto;
+  z-index: 2;
+  img {
+    object-fit: contain;
+  }
+  &::before {
+    content: "";
+    background-image: url("../images/Ellipse.svg");
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    z-index: -1;
+  }
+}
+
+.svgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+.titleBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 3;
+  position: relative;
+  h1 {
+    background: transparent linear-gradient(270deg, #cb0c4d 0%, #ff7904 100%) 0%
+      0% no-repeat padding-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.btnBox {
+  z-index: 2;
+  position: relative;
+  font-size: 0.8rem;
+  button {
+    text-transform: uppercase;
+    padding: 0.6rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    letter-spacing: 0.3rem;
+    color: $color-white;
+    font-family: $ff-head;
+    font-weight: normal;
+    background: transparent
+      linear-gradient(
+        92deg,
+        #ff8930 0%,
+        #ff852d 2%,
+        #ff6214 24%,
+        #ff4c05 41%,
+        #ff4500 53%,
+        #fd4503 54%,
+        #d24547 70%,
+        #b44578 84%,
+        #a14597 94%,
+        #9a45a3 100%
+      )
+      0% 0% no-repeat padding-box;
+  }
+}

@@ -1,0 +1,83 @@
+<header id="header">
+  <div class="navbar">
+    <div class="logoBox">
+      <div class="logoBoxOne">
+        <a href="{{ menuLink 'index'}}" class="navbar-brand" title="logo" aria-label="logo"><img
+            src="{{assets}}/images/logo.svg" class="fullLogo" alt="" /></a>
+      </div>
+    </div>
+    <div class="nav_box" id="master_menu">
+      <nav class="navbar-inner">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="{{lang_switch}}" class="nav-link">
+              <span>{{langName
+                'En' 'ع'}}</span>
+            </a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav-sec">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span>About</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="lBox">
+      <ul class="sMenu">
+        <li class="smallMr burger_li no_hide">
+          <button class="menu_trigger" data-traget="master_menu" aria-label="Burger Menu">
+            <span class="dot dot1"></span>
+            <span class="dot dot2"></span>
+            <span class="dot dot3"></span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+{{!-- <header id="header">
+  <div class="navbar">
+
+    <div class="logoBox">
+      <div class="logoBoxOne">
+        <a href="#" class="navbar-brand" title="logo" aria-label="logo"><img src="{{assets}}/images/LSEG-logo.svg"
+            class="fullLogo" alt="" /></a>
+      </div>
+      <div class="logoBoxTwo">
+        <a href="#" class="navbar-brand" title="logo" aria-label="logo"><img src="{{assets}}/images/SCB-logo.svg"
+            class="fullLogo" alt="" /></a>
+      </div>
+    </div>
+
+    <div class="listWrap">
+      <ul class="navList">
+        <li class="navItem"><a href="#" class="navLink active">Home</a></li>
+        <li class="navItem"><a href="#" class="navLink">About</a></li>
+        <li class="navItem"><a href="#" class="navLink">Speakers</a></li>
+        <li class="navItem"><a href="#" class="navLink">Agenda</a></li>
+        <li class="navItem"><a href="#" class="navLink">Sponsors</a></li>
+        <li class="navItem">
+          <a href="#" class="navLink btnMain btnWhite"><span>Register</span></a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+  </div>
+</header> --}}

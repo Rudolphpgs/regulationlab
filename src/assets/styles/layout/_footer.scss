@@ -1,0 +1,126 @@
+// .footer {
+//   background: $brand-color;
+//   // min-height: 10vh;
+
+//   .footerWrap {
+//     text-align: center;
+//     max-width: 92vw;
+//     margin: 0 auto;
+//     display: grid;
+//     grid-template-columns: auto 1fr auto;
+//     grid-gap: 1rem;
+//     padding: 1.2rem 0;
+//     @media screen and (max-width: 428px) {
+//       grid-template-columns: 1fr;
+//     }
+
+//     .listWrap {
+//       .navList {
+//         list-style: none;
+//         margin: 0;
+//         padding: 0;
+//         display: grid;
+//         grid-template-columns: repeat(5, auto);
+//         grid-gap: 1rem;
+//         .navItem {
+//           padding-inline-end: 0;
+//           display: flex;
+//           justify-content: center;
+//           .navLink {
+//             font-size: 0.95vw;
+//             @media screen and (max-width: 1024px) {
+//               font-size: 1.2vw;
+//             }
+//             @media screen and (max-width: 428px) {
+//               font-size: 2.9vw;
+//             }
+//           }
+//         }
+//       }
+//     }
+
+//     .iconWrap {
+//       .iconList {
+//         list-style: none;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         padding: 0;
+//         margin: 0;
+//         .iconItem {
+//           display: flex;
+//           justify-content: center;
+//           margin-inline-start: 1.5rem;
+//           &:first-child {
+//             margin-inline-start: 0;
+//           }
+//           &:hover {
+//             svg {
+//               transform: translateY(-5px);
+//             }
+//           }
+
+//           .iconLink {
+//             width: 1.2rem;
+//             height: 1.2rem;
+//             svg {
+//               width: 100%;
+//               height: 100%;
+//               object-fit: contain;
+//               transition: all 0.4s ease;
+//             }
+//           }
+//         }
+//       }
+//     }
+
+//     .termsWrap {
+//       display: flex;
+//       align-items: center;
+//       span {
+//         color: $color-white;
+//         font-size: 0.9vw;
+//         @media screen and (max-width: 1024px) {
+//           font-size: 1.1vw;
+//         }
+//         @media screen and (max-width: 428px) {
+//           font-size: 3vw;
+//         }
+//       }
+//     }
+//   }
+
+//   .navItem {
+//     padding-inline-end: 2rem;
+//     .navLink {
+//       position: relative;
+//       text-transform: uppercase;
+//       color: $color-white;
+//       font-weight: 600;
+//       font-size: 1vw;
+//       &::after {
+//         content: "";
+//         width: 100%;
+//         height: 2px;
+//         background-color: $color-white;
+//         position: absolute;
+//         left: 0;
+//         bottom: -5px;
+//         transform: scaleX(0);
+//         transform-origin: right;
+//         transition: transform 0.4s ease;
+//       }
+//       &:hover {
+//         &::after {
+//           transform: scaleX(1);
+//           transform-origin: left;
+//         }
+//       }
+//       &.active {
+//         &::after {
+//           transform: scaleX(1);
+//         }
+//       }
+//     }
+//   }
+// }

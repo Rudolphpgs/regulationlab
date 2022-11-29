@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html class="rtl" dir="rtl" lang="ar">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>مسابقة المنكوس</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preload" href="assets/images/logo.svg" as="image">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/styles/main.css?23424">
+    <link rel="stylesheet" href="assets/styles/main-rtl.css?2324">
+    <style>
+        .loader {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99999999;
+            background: #141414;
+            margin: auto;
+            -webkit-transition: all .2s .1s ease-in-out;
+            -o-transition: all .2s .1s ease-in-out;
+            transition: all .2s .1s ease-in-out;
+            /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);*/
+        }
+    
+        .loader .in_loader {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            height: 100%;
+            -webkit-transition: all .8s ease-in-out;
+            -o-transition: all .8s ease-in-out;
+            transition: all .8s ease-in-out
+        }
+    
+        .is-loaded .loader {
+            /*  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);*/
+            opacity: 0;
+    
+        }
+    
+        .loader .loader-img {
+            margin: 0;
+            text-align: center;
+            position: relative;
+            /*-webkit-animation: logoclipZoom 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate;
+            animation: logoclipZoom 2s linear infinite alternate;*/
+        }
+    
+        .loader .loader-img svg,
+        .loader .loader-img img {
+            animation: logoclipZoom 2s linear infinite alternate;
+        }
+    
+    
+        @-webkit-keyframes logoclipZoom {
+            from {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+    
+            to {
+                -webkit-transform: scale(.8);
+                transform: scale(.8);
+            }
+        }
+    
+        @keyframes logoclipZoom {
+            from {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+    
+            to {
+                -webkit-transform: scale(.8);
+                transform: scale(.8);
+            }
+        }
+    
+        .loader .loader-img {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            -webkit-transition: all 1.2s ease-in-out;
+            -o-transition: all 1.2s ease-in-out;
+            transition: all 1.2s ease-in-out
+        }
+    
+    
+    
+        .loader .loader-img svg,
+        .loader .loader-img img {
+            width: 100%;
+            height: auto;
+        }
+    
+        .loadScale .loader .loader-img {
+            transform: scale(2);
+            opacity: 0;
+            filter: blur(10px);
+        }
+    
+    
+    
+        @media only screen and (max-width: 767px) {
+    
+            .loader .loader-img svg,
+            .loader .loader-img img {
+                max-width: 70vw;
+            }
+        }
+    
+        .is-loaded .loader .loader-img svg,
+        .is-loaded .loader .loader-img img {
+            animation-play-state: paused;
+        }
+    
+    
+        .is-loaded .loader {
+            pointer-events: none
+        }
+    </style>
+
+
+</head>
+
+<body class="home__page __index_ar">
+    <header id="header">
+      <div class="navbar">
+        <div class="logoBox">
+          <div class="logoBoxOne">
+            <a href="index_ar.html" class="navbar-brand" title="logo" aria-label="logo"><img
+                src="assets/images/logo.svg" class="fullLogo" alt="" /></a>
+          </div>
+        </div>
+        <div class="nav_box" id="master_menu">
+          <nav class="navbar-inner">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                  <span>En</span>
+                </a>
+              </li>
+            </ul>
+    
+            <ul class="navbar-nav-sec">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span>Home</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span>About</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <span>Contact</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="lBox">
+          <ul class="sMenu">
+            <li class="smallMr burger_li no_hide">
+              <button class="menu_trigger" data-traget="master_menu" aria-label="Burger Menu">
+                <span class="dot dot1"></span>
+                <span class="dot dot2"></span>
+                <span class="dot dot3"></span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    
+<div class="loader">
+	<div class="in_loader">
+		<div class="loader-block">
+			<div class="loader-img">
+				<img src="assets/images/logo.svg" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+
+<main class="home">
+  <section class="homeBanner">
+    <div class="imageBlock abs">
+      <picture>
+        <source srcset="assets/images/banner-bg.jpg" type="image/jpeg" />
+        <img src="assets/images/banner-bg.jpg" loading="lazy" />
+      </picture>
+    </div>
+
+    <div class="container">
+      <div class="textWrap">
+        <div class="inner gridItems">
+          <div class="titleBlock anMain">
+            <h1>الندوة الثالثة عشرة للالتزام ومكافحة غسل الأموال (CAML)</h1>
+          </div>
+
+          <div class="descBlock ">
+            <span class="descInfo anMain">تحت رعاية</span>
+            <div class="descLinks anMain">
+              <a href="#" class="descLink">
+                المكتب التنفيذي لمكافحة غسل الأموال وتمويل الإرهاب (AML / CTF)
+              </a>
+            </div>
+          </div>
+
+          <div class="detailsBlock gridItems">
+            <div class="detailItem">
+              <div class="inner ">
+                <span class="detailTitle anMain">تاريخ</span>
+                <span class="detailinfo anMain">30 يناير 2022</span>
+              </div>
+            </div>
+
+            <div class="detailItem">
+              <div class="inner">
+                <span class="detailTitle anMain">زمن</span>
+                <span class="detailinfo anMain">08:00 صباحا - 04:30 مساءا</span>
+              </div>
+            </div>
+
+            <div class="detailItem">
+              <div class="inner">
+                <span class="detailTitle anMain">موقعك</span>
+                <span class="detailinfo anMain">فندق انتركونتيننتال</span>
+                <span class="detailTitle anMain">الرياض، المملكة العربية السعودية</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+  <section class="homeAbout section" id="about" data-aos="fade-up" data-aos-duration="800">
+    <div class="container">
+      <div class="topWrapper gridItems">
+        <div class="leftWrapper">
+          <div class="titleBlock">
+            <h2>حول CAML</h2>
+          </div>
+        </div>
+        <div class="rightWrapper">
+          <div class="textBlock ">
+            <p>
+              البنك المركزي السعودي (ساما) واللجنة الدائمة لمكافحة غسل الأموال (AMLPC) وبورصة لندن
+              يسر Group (LSEG) دعوتك للمشاركة في الامتثال الثالث عشر لهذا العام و
+              ندوة مكافحة غسل الأموال (CAML) برعاية معالي الدكتور فهد عبد الله
+              المبارك ، محافظ مؤسسة النقد العربي السعودي في 30 يناير 2022 ، الرياض ، المملكة العربية السعودية.</p>
+            <p>
+              تم عقد CAML لأول مرة في المملكة العربية السعودية في عام 2008 ، وكان هذا الحدث استجابة للضغوط التنظيمية
+              المتزايدة وتعقيد الامتثال في أعقاب الأزمة المالية.</p>
+          </div>
+
+
+
+          <div class="btnWrap">
+            <a href="#" class="btnMain"><span>اقرأ أكثر</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottomWrapper gridItems">
+
+        <div class="gridItemsSecondary" data-aos="fade-up-right" data-aos-duration="1000">
+          <div class="aItem">
+            <a href="assets/images/homeImageOne.jpg" class="aItemWrapper" data-fancybox="g2">
+              <div class="imageBlock abs">
+                <picture>
+                  <source srcset="assets/images/homeImageOne.jpg" type="image/jpeg" />
+                  <img src="assets/images/homeImageOne.jpg" loading="lazy" />
+                </picture>
+              </div>
+            </a>
+          </div>
+          <div class="aItem">
+            <a href="assets/images/homeImageTwo.jpg" class="aItemWrapper" data-fancybox="g2">
+              <div class="imageBlock abs">
+                <picture>
+                  <source srcset="assets/images/homeImageTwo.jpg" type="image/jpeg" />
+                  <img src="assets/images/homeImageTwo.jpg" loading="lazy" />
+                </picture>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="aItem" data-aos="fade-up" data-aos-duration="1000">
+          <a href="assets/images/homeImageThree.jpg" class="aItemWrapper" data-fancybox="g2">
+            <div class="imageBlock abs">
+              <picture>
+                <source srcset="assets/images/homeImageThree.jpg" type="image/jpeg" />
+                <img src="assets/images/homeImageThree.jpg" loading="lazy" />
+              </picture>
+            </div>
+          </a>
+        </div>
+
+        <div class="aItem" data-aos="fade-up-left" data-aos-duration="1000">
+          <a href="assets/images/homeImageFour.jpg" class="aItemWrapper" data-fancybox="g2">
+            <div class="imageBlock abs">
+              <picture>
+                <source srcset="assets/images/homeImageFour.jpg" type="image/jpeg" />
+                <img src="assets/images/homeImageFour.jpg" loading="lazy" />
+              </picture>
+            </div>
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="homeSpeakers section" id="speakers" data-aos="fade-up" data-aos-duration="800">
+    <div class="container">
+      <div class="titleBlock textCenter">
+        <h2>مكبرات الصوت</h2>
+      </div>
+
+      <div class="speakers gridItems">
+
+        <div class="sitem" data-aos="fade-up" data-aos-duration="1000"  >
+          <a href="#" class="sItemWrapper">
+            <div class="imageBlock abs">
+              <picture>
+                <img src="assets/images/Dr-Fahad-Ibrahim -Alshathri.jpg" type="image/jpeg" alt="" />
+              </picture>
+            </div>
+
+            <div class="sDetails">
+              <div class="sName">
+                <span>در. فهد إبراهيم الشثري</span>
+              </div>
+
+              <div class="textBlock sM">
+                <p>
+                  نائب المحافظ للرقابة ، البنك المركزي السعودي (ساما)
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="sitem" data-aos="fade-up" data-aos-duration="1000"  >
+          <a href="#" class="sItemWrapper">
+            <div class="imageBlock abs">
+              <picture>
+                <img src="assets/images/Adel-AlQulish.jpg" type="image/jpeg" alt="" />
+              </picture>
+            </div>
+
+            <div class="sDetails">
+              <div class="sName">
+                <span>عادل القليش</span>
+              </div>
+
+              <div class="textBlock sM">
+                <p>
+                  مستشار أول ونائب رئيس اللجنة الدائمة لمكافحة غسل الأموال بالبنك المركزي السعودي (ساما)
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="sitem" data-aos="fade-up" data-aos-duration="1000"  >
+          <a href="#" class="sItemWrapper">
+            <div class="imageBlock abs">
+              <picture>
+                <img src="assets/images/Hamid-Saif-Al- Zaabi.jpg" type="image/jpeg" alt="" />
+              </picture>
+            </div>
+
+            <div class="sDetails">
+              <div class="sName">
+                <span>حميد سيف أل ذاب</span>
+              </div>
+
+              <div class="textBlock sM">
+                <p>
+                  مدير عام - المكتب التنفيذي لمكافحة غسل الأموال وتمويل الإرهاب
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="sitem" data-aos="fade-up" data-aos-duration="1000"  >
+          <a href="#" class="sItemWrapper">
+            <div class="imageBlock abs">
+              <picture>
+                <img src="assets/images/Dr-Mohammed-AlHussein.jpg" type="image/jpeg" alt="" />
+              </picture>
+            </div>
+
+            <div class="sDetails">
+              <div class="sName">
+                <span>در. محمد الحسين</span>
+              </div>
+
+              <div class="textBlock sM">
+                <p>
+                  المؤسس والرئيس التنفيذي ، Mozn
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="sitem" data-aos="fade-up" data-aos-duration="1000"  >
+          <a href="#" class="sItemWrapper">
+            <div class="imageBlock abs">
+              <picture>
+                <img src="assets/images/David-Lewis.jpg" type="image/jpeg" alt="" />
+              </picture>
+            </div>
+
+            <div class="sDetails">
+              <div class="sName">
+                <span>ديفيد لويس</span>
+              </div>
+
+              <div class="textBlock sM">
+                <p>
+                  سكرتير تنفيذي سابق
+                  من مهمة الإجراءات المالية
+                  القوة (FATF) ، الإدارة
+                  مدير في Kroll
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="sitem" data-aos="fade-up" data-aos-duration="1000"  >
+          <a href="#" class="sItemWrapper">
+            <div class="imageBlock abs">
+              <picture>
+                <img src="assets/images/David-Shepherd.jpg" type="image/jpeg" alt="" />
+              </picture>
+            </div>
+
+            <div class="sDetails">
+              <div class="sName">
+                <span>ديفيد شيبرد</span>
+              </div>
+
+              <div class="textBlock sM">
+                <p>
+                  مدير الشريك العالمي ،
+                  الامتثال للجرائم المالية ،
+                  Refinitiv ، شركة LSEG
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="sitem" data-aos="fade-up" data-aos-duration="1000"  >
+          <a href="#" class="sItemWrapper">
+            <div class="imageBlock abs">
+              <picture>
+                <img src="assets/images/Essa-Mohammed -Al-Hardan.jpg" type="image/jpeg" alt="" />
+              </picture>
+            </div>
+
+            <div class="sDetails">
+              <div class="sName">
+                <span>عسى محمد أل حردان</span>
+              </div>
+
+              <div class="textBlock sM">
+                <p>
+                  السكرتير التنفيذي ل
+                  اللجنة الوطنية لمكافحة غسل الأموال وتمويل الإرهاب ،
+                  مصرف قطر المركزي
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="sitem" data-aos="fade-up" data-aos-duration="1000"  >
+          <a href="#" class="sItemWrapper">
+            <div class="imageBlock abs">
+              <picture>
+                <img src="assets/images/Florence-Vicentini.jpg" type="image/jpeg" alt="" />
+              </picture>
+            </div>
+
+            <div class="sDetails">
+              <div class="sName">
+                <span>فلورنسا فيسينتيني</span>
+              </div>
+
+              <div class="textBlock sM">
+                <p>
+                  CCO ، النيتريوم
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="sitem" data-aos="fade-up" data-aos-duration="1000"  >
+          <a href="#" class="sItemWrapper">
+            <div class="imageBlock abs">
+              <picture>
+                <img src="assets/images/Gabriele-Dunker.jpg" type="image/jpeg" alt="" />
+              </picture>
+            </div>
+
+            <div class="sDetails">
+              <div class="sName">
+                <span>غابرييل دنكر</span>
+              </div>
+
+              <div class="textBlock sM">
+                <p>
+                  شريك مؤسس ، مستشارو الشفافية المالية
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="btnWrap text-center">
+        <a href="#" class="btnMain"><span>مشاهدة الكل</span></a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="homeAgenda section greyBg" id="agenda" data-aos="fade-up" data-aos-duration="800">
+    <div class="container">
+      <div class="topWrapper">
+        <div class="titleWrap">
+          <div class="titleBlock">
+            <h2>جدول أعمال</h2>
+          </div>
+
+          <div class="titleDateWrap">
+            <span>30 يناير 2022</span>
+          </div>
+        </div>
+      </div>
+      <div class="bottomWrapper">
+        <ul id="my-accordion" class="accordionjs">
+
+          <li class="acBlock">
+            <div class="acTitleBlock">
+              <div class="gridItems">
+                <div class="timeBlock"><span>08:00 صباحا - 09:00 صباحا</span></div>
+                <div class="keyBlock"><span>التسجيل والشبكات</span></div>
+                <div class="acBtn textEnd active"></div>
+              </div>
+            </div>
+            <div class="acDescBlock">
+
+
+              <div class="acDesc">
+                <div class="textBlock ">
+                  <p>العميل مهم جدا ، العميل سيتبعه. لكي يتم كره اللوريت ، إنها مجرد مسألة حقيقة. لا يهتم بالرعاية
+                    الطبية للمريض. لكن لا أحد باستثناء الأطفال
+                    لوحة المفاتيح الآن أنا بحاجة إلى دهليز ، من هو مؤلف ultricies؟</p>
+                </div>
+
+                <div class="speakerBlock">
+                  <div class="gridItems">
+                    <div class="sItem gridItems">
+                      <div class="imageBlock abs">
+                        <picture>
+                          <source srcset="assets/images/Dr-Fahad-Ibrahim -Alshathri.jpg" type="image/jpeg" />
+                          <img src="assets/images/Dr-Fahad-Ibrahim -Alshathri.jpg" loading="lazy" />
+                        </picture>
+                      </div>
+
+                      <div class="nSpeaker">
+                        <span>فهد ابراهيم الشثري</span>
+                      </div>
+                    </div>
+                    <div class="sItem gridItems">
+                      <div class="imageBlock abs">
+                        <picture>
+                          <source srcset="assets/images/David-Lewis.jpg" type="image/jpeg" />
+                          <img src="assets/images/David-Lewis.jpg" loading="lazy" />
+                        </picture>
+                      </div>
+
+                      <div class="nSpeaker">
+                        <span>ديفيد لويس
+                        </span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </li>
+
+
+          <li class="acBlock">
+            <div class="acTitleBlock">
+              <div class="gridItems">
+                <div class="timeBlock"><span>09:00 صباحا - 09:10 صباحا</span></div>
+                <div class="keyBlock"><span>الخطاب الرئيسي</span></div>
+                <div class="acBtn textEnd">
+
+                </div>
+              </div>
+            </div>
+            <div class="acDescBlock">
+
+
+              <div class="acDesc">
+                <div class="textBlock ">
+                  <p>العميل مهم جدا ، العميل سيتبعه. لكي يتم كره اللوريت ، إنها مجرد مسألة حقيقة. لا يهتم بالرعاية
+                    الطبية للمريض. لكن لا أحد باستثناء الأطفال
+                    لوحة المفاتيح الآن أنا بحاجة إلى دهليز ، من هو مؤلف ultricies؟.</p>
+                </div>
+
+                <div class="speakerBlock">
+                  <div class="gridItems">
+                    <div class="sItem gridItems">
+                      <div class="imageBlock abs">
+                        <picture>
+                          <source srcset="assets/images/Dr-Fahad-Ibrahim -Alshathri.jpg" type="image/jpeg" />
+                          <img src="assets/images/Dr-Fahad-Ibrahim -Alshathri.jpg" loading="lazy" />
+                        </picture>
+                      </div>
+
+                      <div class="nSpeaker">
+                        <span>فهد ابراهيم الشثري</span>
+                      </div>
+                    </div>
+                    <div class="sItem gridItems">
+                      <div class="imageBlock abs">
+                        <picture>
+                          <source srcset="assets/images/David-Lewis.jpg" type="image/jpeg" />
+                          <img src="assets/images/David-Lewis.jpg" loading="lazy" />
+                        </picture>
+                      </div>
+
+                      <div class="nSpeaker">
+                        <span>ديفيد لويس
+                        </span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </li>
+
+          <li class="acBlock">
+            <div class="acTitleBlock">
+              <div class="gridItems">
+                <div class="timeBlock"><span>09:10 صباحًا - 10:00 صباحًا</span></div>
+                <div class="keyBlock"><span>الجلسة الأولى: آخر التطورات في دول مجلس التعاون الخليجي في تطبيق معايير
+                    مجموعة العمل المالي</span></div>
+                <div class="acBtn textEnd">
+
+                </div>
+              </div>
+            </div>
+            <div class="acDescBlock">
+
+
+              <div class="acDesc">
+                <div class="textBlock ">
+                  <p>العميل مهم جدا ، العميل سيتبعه. لكي يتم كره اللوريت ، إنها مجرد مسألة حقيقة. لا يهتم بالرعاية
+                    الطبية للمريض. لكن لا أحد باستثناء الأطفال
+                    لوحة المفاتيح الآن أنا بحاجة إلى دهليز ، من هو مؤلف ultricies؟.</p>
+                </div>
+
+                <div class="speakerBlock">
+                  <div class="gridItems">
+                    <div class="sItem gridItems">
+                      <div class="imageBlock abs">
+                        <picture>
+                          <source srcset="assets/images/Dr-Fahad-Ibrahim -Alshathri.jpg" type="image/jpeg" />
+                          <img src="assets/images/Dr-Fahad-Ibrahim -Alshathri.jpg" loading="lazy" />
+                        </picture>
+                      </div>
+
+                      <div class="nSpeaker">
+                        <span>فهد ابراهيم الشثري</span>
+                      </div>
+                    </div>
+                    <div class="sItem gridItems">
+                      <div class="imageBlock abs">
+                        <picture>
+                          <source srcset="assets/images/David-Lewis.jpg" type="image/jpeg" />
+                          <img src="assets/images/David-Lewis.jpg" loading="lazy" />
+                        </picture>
+                      </div>
+
+                      <div class="nSpeaker">
+                        <span>ديفيد لويس
+                        </span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </li>
+
+          <li class="acBlock">
+            <div class="acTitleBlock">
+              <div class="gridItems">
+                <div class="timeBlock"><span>10:00 ص - 11:00 ص</span></div>
+                <div class="keyBlock"><span>جلسة النقاش الثانية: أحدث التوقعات العالمية لمجموعة العمل المالي</span>
+                </div>
+                <div class="acBtn textEnd">
+
+                </div>
+              </div>
+            </div>
+            <div class="acDescBlock">
+
+
+              <div class="acDesc">
+                <div class="textBlock ">
+                  <p>العميل مهم جدا ، العميل سيتبعه. لكي يتم كره اللوريت ، إنها مجرد مسألة حقيقة. لا يهتم بالرعاية
+                    الطبية للمريض. لكن لا أحد باستثناء الأطفال
+                    لوحة المفاتيح الآن أنا بحاجة إلى دهليز ، من هو مؤلف ultricies؟</p>
+                </div>
+
+                <div class="speakerBlock">
+                  <div class="gridItems">
+                    <div class="sItem gridItems">
+                      <div class="imageBlock abs">
+                        <picture>
+                          <source srcset="assets/images/Dr-Fahad-Ibrahim -Alshathri.jpg" type="image/jpeg" />
+                          <img src="assets/images/Dr-Fahad-Ibrahim -Alshathri.jpg" loading="lazy" />
+                        </picture>
+                      </div>
+
+                      <div class="nSpeaker">
+                        <span>فهد ابراهيم الشثري</span>
+                      </div>
+                    </div>
+                    <div class="sItem gridItems">
+                      <div class="imageBlock abs">
+                        <picture>
+                          <source srcset="assets/images/David-Lewis.jpg" type="image/jpeg" />
+                          <img src="assets/images/David-Lewis.jpg" loading="lazy" />
+                        </picture>
+                      </div>
+
+                      <div class="nSpeaker">
+                        <span>ديفيد لويس
+                        </span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </li>
+
+          <li class="acBlock">
+            <div class="acTitleBlock">
+              <div class="gridItems">
+                <div class="timeBlock"><span>11:00 ص - 11:20 ص</span></div>
+                <div class="keyBlock"><span>استراحة التواصل</span></div>
+                <div class="acBtn textEnd">
+
+                </div>
+              </div>
+            </div>
+            <div class="acDescBlock">
+
+
+              <div class="acDesc">
+                <div class="textBlock ">
+                  <p>العميل مهم جدا ، العميل سيتبعه. لكي يتم كره اللوريت ، إنها مجرد مسألة حقيقة. لا يهتم بالرعاية
+                    الطبية للمريض. لكن لا أحد باستثناء الأطفال
+                    لوحة المفاتيح الآن أنا بحاجة إلى دهليز ، من هو مؤلف ultricies؟.</p>
+                </div>
+
+                <div class="speakerBlock">
+                  <div class="gridItems">
+                    <div class="sItem gridItems">
+                      <div class="imageBlock abs">
+                        <picture>
+                          <source srcset="assets/images/Dr-Fahad-Ibrahim -Alshathri.jpg" type="image/jpeg" />
+                          <img src="assets/images/Dr-Fahad-Ibrahim -Alshathri.jpg" loading="lazy" />
+                        </picture>
+                      </div>
+
+                      <div class="nSpeaker">
+                        <span>فهد ابراهيم الشثري</span>
+                      </div>
+                    </div>
+                    <div class="sItem gridItems">
+                      <div class="imageBlock abs">
+                        <picture>
+                          <source srcset="assets/images/David-Lewis.jpg" type="image/jpeg" />
+                          <img src="assets/images/David-Lewis.jpg" loading="lazy" />
+                        </picture>
+                      </div>
+
+                      <div class="nSpeaker">
+                        <span>ديفيد لويس
+                        </span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </li>
+
+          <li class="acBlock">
+            <div class="acTitleBlock">
+              <div class="gridItems">
+                <div class="timeBlock"><span>11:20 صباحًا - 12:20 صباحًا</span></div>
+                <div class="keyBlock"><span>جلسة النقاش الثالثة: آخر التطورات في العقوبات العالمية</span></div>
+                <div class="acBtn textEnd">
+
+                </div>
+              </div>
+            </div>
+            <div class="acDescBlock">
+
+
+              <div class="acDesc">
+                <div class="textBlock ">
+                  <p>العميل مهم جدا ، العميل سيتبعه. لكي يتم كره اللوريت ، إنها مجرد مسألة حقيقة. لا يهتم بالرعاية
+                    الطبية للمريض. لكن لا أحد باستثناء الأطفال
+                    لوحة المفاتيح الآن أنا بحاجة إلى دهليز ، من هو مؤلف ultricies؟</p>
+                </div>
+
+                <div class="speakerBlock">
+                  <div class="gridItems">
+                    <div class="sItem gridItems">
+                      <div class="imageBlock abs">
+                        <picture>
+                          <source srcset="assets/images/Dr-Fahad-Ibrahim -Alshathri.jpg" type="image/jpeg" />
+                          <img src="assets/images/Dr-Fahad-Ibrahim -Alshathri.jpg" loading="lazy" />
+                        </picture>
+                      </div>
+
+                      <div class="nSpeaker">
+                        <span>فهد ابراهيم الشثري</span>
+                      </div>
+                    </div>
+                    <div class="sItem gridItems">
+                      <div class="imageBlock abs">
+                        <picture>
+                          <source srcset="assets/images/David-Lewis.jpg" type="image/jpeg" />
+                          <img src="assets/images/David-Lewis.jpg" loading="lazy" />
+                        </picture>
+                      </div>
+
+                      <div class="nSpeaker">
+                        <span>ديفيد لويس
+                        </span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="homeSponsers section" id="sponsers" data-aos="fade-up" data-aos-duration="800">
+    <div class="container">
+      <div class="titleBlock textCenter">
+        <h2>الرعاة</h2>
+      </div>
+
+      <div class="organised">
+        <div class="textBlock textCenter ">
+          <span>نظمت من قبل</span>
+        </div>
+        <div class="gridItems">
+          <div class="oItem">
+            <a href="#" class="oItemWrapper">
+              <div class="imageBlock abs">
+                <picture>
+                  <source srcset="assets/images/LSEG.svg" type="image/jpeg" />
+                  <img src="assets/images/LSEG.svg" loading="lazy" />
+                </picture>
+              </div>
+            </a>
+          </div>
+
+          <div class="oItem">
+            <a href="#" class="oItemWrapper">
+              <div class="imageBlock abs">
+                <picture>
+                  <source srcset="assets/images/anti-money.svg" type="image/jpeg" />
+                  <img src="assets/images/anti-money.svg" loading="lazy" />
+                </picture>
+              </div>
+            </a>
+          </div>
+
+          <div class="oItem">
+            <a href="#" class="oItemWrapper">
+              <div class="imageBlock abs">
+                <picture>
+                  <source srcset="assets/images/sc-ank.svg" type="image/jpeg" />
+                  <img src="assets/images/sc-ank.svg" loading="lazy" />
+                </picture>
+              </div>
+            </a>
+          </div>
+
+          <div class="oItem">
+            <a href="#" class="oItemWrapper">
+              <div class="imageBlock abs">
+                <picture>
+                  <source srcset="assets/images/sabb.svg" type="image/jpeg" />
+                  <img src="assets/images/sabb.svg" loading="lazy" />
+                </picture>
+              </div>
+            </a>
+          </div>
+
+          <div class="oItem">
+            <a href="#" class="oItemWrapper">
+              <div class="imageBlock abs">
+                <picture>
+                  <source srcset="assets/images/anb.svg" type="image/jpeg" />
+                  <img src="assets/images/anb.svg" loading="lazy" />
+                </picture>
+              </div>
+            </a>
+          </div>
+
+          <div class="oItem">
+            <a href="#" class="oItemWrapper">
+              <div class="imageBlock abs">
+                <picture>
+                  <source srcset="assets/images/stc-pay.svg" type="image/jpeg" />
+                  <img src="assets/images/stc-pay.svg" loading="lazy" />
+                </picture>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="partnership">
+        <div class="textBlock textCenter ">
+          <span>بالشراكة مع</span>
+        </div>
+
+
+        <div class="gridItems">
+          <div class="oItem">
+            <a href="#" class="oItemWrapper">
+              <div class="imageBlock abs">
+                <picture>
+                  <source srcset="assets/images/vamozn.svg" type="image/jpeg" />
+                  <img src="assets/images/vamozn.svg" loading="lazy" />
+                </picture>
+              </div>
+            </a>
+          </div>
+
+          <div class="oItem">
+            <a href="#" class="oItemWrapper">
+              <div class="imageBlock abs">
+                <picture>
+                  <source srcset="assets/images/hala.svg" type="image/jpeg" />
+                  <img src="assets/images/hala.svg" loading="lazy" />
+                </picture>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+<script src="assets/scripts/lib/modernizr.min.js"></script>
+<script src="assets/scripts/lib/jquery-3.4.1.min.js"></script>
+<script src="assets/scripts/min/home_plugins.js?576675"></script>
+<script src="assets/scripts/min/home.js?35343"></script>
+
+<script>
+  $(function () {
+    $('[data-select]').selectric({
+      disableOnMobile: false,
+      nativeOnMobile: false
+    });
+
+  });
+
+
+</script>
+<script>
+  var animate = setTimeout(animateIn, 1000)
+
+  function animateIn() {
+    var aniMain = new Textify({
+      selector: ".anMain",
+      once: false,
+      rotation: -10,
+      easing: "elasticInOut",
+      fade: true,
+      duration: 1200,
+    });
+
+    window.addEventListener("load", () => {
+      aniMain.onRefresh();
+    });
+  }
+
+
+
+</script>
+    <div class="progress-wrap">
+        <div class="icon_">
+            <svg x="0px" y="0px" viewBox="0 0 21.8 28" overflow="visible" xml:space="preserve">
+                <line fill="none" stroke="#1c1c1c" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                    x1="10.9" y1="24.8" x2="10.9" y2="3.7" />
+                <polyline fill="none" stroke="#1c1c1c" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-miterlimit="10" points="2.7,11.6 
+	10.9,3.3 19.2,11.6 " />
+            </svg>
+        </div>
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+</body>
+
+</html>
